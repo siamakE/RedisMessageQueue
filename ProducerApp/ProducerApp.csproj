@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Using Include="ProducerApp" />
+    <Using Include="ServiceStack" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+	  <PackageReference Include="ServiceStack" Version="6.*" />
+	  <PackageReference Include="ServiceStack.Redis" Version="6.*" />
+	  <PackageReference Include="ServiceStack.Server" Version="6.*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\worker-redismq-master\worker-redismq-master\MyApp.ServiceModel\MyApp.ServiceModel.csproj" />
+  </ItemGroup>
+
+</Project>
